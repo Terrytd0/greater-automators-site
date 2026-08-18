@@ -18,6 +18,8 @@ export default function Footer() {
           </a>
           <a href="https://www.linkedin.com/in/terry-nyirenda-210455170" target="_blank" rel="noreferrer">LinkedIn</a>
           <a href="mailto:terry@greaterautomators.com">Email</a>
+          <a href="tel:+27729211904">Phone</a>
+          <a href="https://wa.me/265986605859" target="_blank" rel="noreferrer">WhatsApp</a>
         </nav>
       </div>
       <div className="container footer-bar">
