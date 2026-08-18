@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0e14"/>
+      <stop offset="1" stop-color="#07090d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5ee0c8"/>
+      <stop offset="1" stop-color="#6f86ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity="0.5">
+    <circle cx="1050" cy="120" r="2" fill="#5ee0c8"/>
+    <circle cx="200" cy="540" r="2" fill="#5ee0c8"/>
+    <circle cx="500" cy="80" r="1.5" fill="#a0bedc"/>
+    <circle cx="820" cy="560" r="1.5" fill="#a0bedc"/>
+    <circle cx="340" cy="300" r="1.5" fill="#a0bedc"/>
+    <circle cx="980" cy="380" r="2" fill="#6f86ff"/>
+  </g>
+  <path d="M90 470 L300 150 L420 360 L700 90" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="700" cy="90" r="16" fill="#5ee0c8"/>
+  <circle cx="90" cy="470" r="16" fill="#6f86ff"/>
+  <text x="90" y="120" font-family="'Space Grotesk', 'Inter', Arial, sans-serif" font-size="30" font-weight="bold" fill="#5ee0c8" letter-spacing="4">GREATER AUTOMATORS</text>
+  <text x="90" y="560" font-family="'Space Grotesk', 'Inter', Arial, sans-serif" font-size="46" font-weight="bold" fill="#e8edf4">Custom AI automation for repetitive</text>
+  <text x="90" y="610" font-family="'Space Grotesk', 'Inter', Arial, sans-serif" font-size="46" font-weight="bold" fill="#e8edf4">business workflows.</text>
+</svg>
