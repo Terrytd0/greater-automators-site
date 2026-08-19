@@ -34,7 +34,7 @@ const ITEMS = [
   {
     n: '06',
     title: 'Custom AI Systems',
-    body: 'If the workflow doesn\u2019t fit a predefined category, I design a system around the actual problem.',
+    body: 'If the workflow doesn\u2019t fit a predefined category, we design a system around the actual problem.',
     tags: ['RAG', 'Agents', 'Design'],
   },
 ]
@@ -46,7 +46,7 @@ export default function Capabilities() {
         <div className="section-head">
           <Reveal>
             <span className="eyebrow">Capabilities</span>
-            <h2 className="section-title">What I build</h2>
+            <h2 className="section-title">What we build</h2>
           </Reveal>
           <Reveal delay={100}>
             <p className="section-sub">

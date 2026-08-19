@@ -100,7 +100,7 @@ export default function Hero() {
             </span>
           </h1>
           <p className="hero-sub hero-enter" style={{ '--d': '340ms' }}>
-            I find the repetitive workflows inside a business, then design and
+            We find the repetitive workflows inside a business, then design and
             build custom AI automation around the way it already works.
           </p>
           <div className="hero-cta hero-enter" style={{ '--d': '460ms' }}>

@@ -15,18 +15,19 @@ export default function About() {
         <div className="about-copy">
           <Reveal>
             <span className="eyebrow">About</span>
-            <h2 className="section-title">Hi, I&rsquo;m Terry.</h2>
+            <h2 className="section-title">Founder</h2>
             <p className="about-role mono">AI Engineer · Automation Specialist</p>
           </Reveal>
           <Reveal delay={100}>
             <p className="about-p">
-              I build practical AI systems that turn repetitive business
+              Terry Nyirenda is an AI engineer and automation specialist
+              who builds practical AI systems that turn repetitive business
               workflows into structured, automated processes.
             </p>
           </Reveal>
           <Reveal delay={180}>
             <p className="about-p">
-              My work sits at the intersection of AI engineering and
+              His work sits at the intersection of AI engineering and
               workflow design — from retrieval systems that answer questions
               with evidence, to multi-agent platforms, to pipelines that
               turn raw data into decisions.

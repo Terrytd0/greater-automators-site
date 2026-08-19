@@ -8,17 +8,17 @@ export default function CoreMessage() {
           <Reveal>
             <span className="eyebrow">Approach</span>
             <h2 className="core-quote">
-              I don&rsquo;t start with a generic automation package.
+              We don&rsquo;t start with a generic automation package.
               <br />
               <span className="core-accent">
-                I start with the workflow.
+                We start with the workflow.
               </span>
             </h2>
           </Reveal>
           <Reveal delay={120}>
             <p className="core-body">
               Every business has repetitive processes that consume human
-              time. I find those processes, determine where AI can genuinely
+              time. We find those processes, determine where AI can genuinely
               help, and build a system around the way your team already
               works — not the other way around.
             </p>
