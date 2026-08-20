@@ -18,6 +18,15 @@ export default function About() {
             <h2 className="section-title">Founder</h2>
             <p className="about-role mono">AI Engineer · Automation Specialist</p>
           </Reveal>
+          <Reveal delay={80}>
+            <p className="about-lead">
+              Greater Automators was built around a simple idea: businesses
+              don&rsquo;t necessarily need more AI tools — they need better
+              ways to put the AI and technology they already have to work. We
+              identify repetitive work surrounding the tools you already use
+              and build custom automation around the gaps.
+            </p>
+          </Reveal>
           <Reveal delay={100}>
             <p className="about-p">
               Terry Nyirenda is an AI engineer and automation specialist

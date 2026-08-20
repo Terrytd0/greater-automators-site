@@ -4,7 +4,7 @@ const PILLARS = [
   {
     k: 'CUSTOM',
     t: 'Built around the actual workflow',
-    b: 'Not a generic package. Every system starts from the process it replaces.',
+    b: 'Not a generic package. Every system starts with understanding the workflow, existing tools and repetitive work involved.',
   },
   {
     k: 'PRACTICAL',

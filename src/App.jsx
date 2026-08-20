@@ -3,6 +3,7 @@ import CursorGlow from './components/CursorGlow.jsx'
 import Nav from './components/Nav.jsx'
 import Hero from './components/Hero.jsx'
 import CoreMessage from './components/CoreMessage.jsx'
+import AlreadyUsingAI from './components/AlreadyUsingAI.jsx'
 import Capabilities from './components/Capabilities.jsx'
 import Work from './components/Work.jsx'
 import Philosophy from './components/Philosophy.jsx'
@@ -24,6 +25,7 @@ export default function App() {
       <main id="main">
         <Hero />
         <CoreMessage />
+        <AlreadyUsingAI />
         <Capabilities />
         <Work />
         <Philosophy />

@@ -1,4 +1,5 @@
 import { Fragment } from 'react'
+import Reveal from './Reveal.jsx'
 
 const PROJECTS = [
   {
@@ -255,7 +256,9 @@ export default function Work() {
           <h2 className="section-title">Built, tested, shipped</h2>
           <p className="section-sub">
             Not placeholder decks — real systems engineered end to end. Each
-            one solves a concrete business workflow.
+            one started as a concrete workflow gap and shows how repetitive
+            work is routed, processed and handed off — with human oversight
+            where it matters.
           </p>
         </div>
 
@@ -266,6 +269,13 @@ export default function Work() {
             <ProjectCard key={p.id} p={p} />
           ))}
         </div>
+
+        <Reveal>
+          <p className="work-note">
+            These projects are proof of engineering capability, not off-the-shelf
+            products. Your workflow will be different — that&rsquo;s the point.
+          </p>
+        </Reveal>
       </div>
     </section>
   )

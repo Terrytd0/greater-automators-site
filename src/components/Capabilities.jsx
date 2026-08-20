@@ -50,7 +50,7 @@ export default function Capabilities() {
           </Reveal>
           <Reveal delay={100}>
             <p className="section-sub">
-              Each system is designed around the workflow it replaces. These
+              Each system is designed around the workflow it fits into. These
               are the recurring shapes the work tends to take — not
               standardized products.
             </p>

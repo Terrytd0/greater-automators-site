@@ -21,10 +21,10 @@ export default function Philosophy() {
           </Reveal>
           <Reveal delay={100}>
             <p className="phil-p">
-              Good automation should not force a business to change how it
-              works. We find the repetitive work and build systems that
-              support the people already doing the valuable human work —
-              not replace them.
+              Good automation should fit the way a business works without
+              forcing unnecessary change. We find the repetitive work and
+              build systems that support the people already doing the
+              valuable human work — not replace them.
             </p>
           </Reveal>
           <Reveal delay={180}>

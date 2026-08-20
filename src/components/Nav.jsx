@@ -5,7 +5,7 @@ const LINKS = [
   { id: 'work', label: 'Work' },
   { id: 'capabilities', label: 'Capabilities' },
   { id: 'process', label: 'Process' },
-  { id: 'about', label: 'About' },
+  { id: 'about', label: 'Founder' },
   { id: 'contact', label: 'Contact' },
 ]
 

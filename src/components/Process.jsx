@@ -5,23 +5,23 @@ import { useScrollY } from '../hooks.js'
 const STEPS = [
   {
     n: '01',
-    title: 'Identify',
-    body: 'Find the repetitive workflows worth automating — the ones consuming real time and slowing the business down.',
+    title: 'Identify the opportunity',
+    body: 'Examine repetitive workflows and identify where AI or automation could remove unnecessary repetitive work.',
   },
   {
     n: '02',
-    title: 'Design',
-    body: 'Map the workflow and determine where AI provides genuine leverage, without forcing the process to change.',
+    title: 'Understand the workflow',
+    body: 'Understand the business\u2019s existing tools, information, people and processes.',
   },
   {
     n: '03',
-    title: 'Build',
-    body: 'Develop and test the custom system against the real workflow, with the edge cases and failure modes handled.',
+    title: 'Design and build',
+    body: 'Create custom automation around the specific workflow and its existing systems.',
   },
   {
     n: '04',
-    title: 'Deploy',
-    body: 'Integrate it into the workflow and refine it based on how it is actually used.',
+    title: 'Keep humans where they matter',
+    body: 'Automation handles repetitive information work while people retain judgment, exceptions and relationships.',
   },
 ]
 
@@ -46,7 +46,7 @@ export default function Process() {
         <div className="section-head">
           <Reveal>
             <span className="eyebrow">Process</span>
-            <h2 className="section-title">How an engagement runs</h2>
+            <h2 className="section-title">How we work</h2>
           </Reveal>
         </div>
 
