@@ -21,17 +21,17 @@ export default function Philosophy() {
           </Reveal>
           <Reveal delay={100}>
             <p className="phil-p">
-              Good automation should fit the way a business works without
-              forcing unnecessary change. We find the repetitive work and
-              build systems that support the people already doing the
-              valuable human work — not replace them.
+              Good automation should disappear into the workflow. The goal
+              isn&rsquo;t to automate people out of the process. It&rsquo;s to
+              remove the repetitive work that consumes their time and operating
+              capacity.
             </p>
           </Reveal>
           <Reveal delay={180}>
             <p className="phil-p">
-              This matters when human judgment, relationships and expertise
-              are the point. The system takes the repetition off your plate;
-              you keep the decisions that need a person.
+              The system handles repetition and orchestration. People keep the
+              judgment, relationships and expertise — the decisions that still
+              need a person.
             </p>
           </Reveal>
         </div>

@@ -13,7 +13,7 @@ const STAGES = [
     id: '02',
     state: 'GAP',
     label: 'Workflow gaps',
-    sub: 'the repetitive work in between',
+    sub: 'manual handoffs that cost time',
     tone: 'gap',
   },
   {
@@ -45,7 +45,8 @@ export default function AlreadyUsingAI() {
             <p className="section-sub">
               A business may already use ChatGPT, Claude, AI software, CRM AI
               features or other AI tools — and still have repetitive work
-              happening around them.
+              happening around them: manual handoffs that consume employee
+              time and add operating cost.
             </p>
           </Reveal>
         </div>
@@ -95,15 +96,13 @@ export default function AlreadyUsingAI() {
             <p>
               AI may handle individual tasks while people still manually move
               information between emails, documents, spreadsheets, CRM systems,
-              databases and internal teams. We look at the workflow surrounding
-              those tools and identify where additional automation could create
-              value — connecting what&rsquo;s already there rather than
-              replacing it.
+              databases and internal teams. Every manual handoff consumes time,
+              introduces opportunities for error and adds operating cost.
             </p>
             <p>
-              We aren&rsquo;t here to replace the tools you already use. We
-              find the gaps and build custom automation around them — keeping
-              human judgment where it matters.
+              We identify those gaps and build automation around the tools you
+              already use — reducing repetitive work without removing the human
+              judgment your business depends on.
             </p>
           </div>
         </Reveal>

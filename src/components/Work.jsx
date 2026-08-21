@@ -13,6 +13,8 @@ const PROJECTS = [
       'A retrieval-augmented generation platform that ingests PDF contracts and case-law, indexes them for hybrid retrieval, and generates answers that cite only retrieved passages — refusing to answer when the corpus does not contain enough evidence.',
     does:
       'Ingests PDFs with full provenance, retrieves via dense vector search fused with BM25 keyword search and refined by a cross-encoder reranker, then generates citation-grounded answers through a FastAPI endpoint. Includes duplicate detection, document-scoped queries, and a golden-dataset evaluation harness enforced as a CI quality gate.',
+    outcome:
+      'Reduces manual document search per matter while keeping every answer grounded in cited evidence.',
     stack: ['FastAPI', 'Qdrant', 'Elasticsearch', 'MongoDB', 'bge-m3', 'RAGAS'],
     repo: 'https://github.com/Terrytd0/LexRag',
     featured: true,
@@ -35,6 +37,8 @@ const PROJECTS = [
       'An AI-powered pipeline that receives lead submissions, validates and deduplicates them, researches each company, generates personalized outreach, enriches the CRM, and notifies the team — end to end.',
     does:
       'Connects Google Forms, n8n, Airtable, OpenAI, Slack and Gmail. Detects duplicate and returning contacts, runs company research with guardrails that prevent fabricated information, generates cold emails and LinkedIn intros, and writes an audit log for every execution.',
+    outcome:
+      'Removes the repetitive research and CRM work around each new lead so sales can focus on outreach.',
     stack: ['n8n', 'OpenAI', 'Airtable', 'Cloudflare Tunnel', 'Slack', 'Gmail'],
     repo: 'https://github.com/Terrytd0/AI-Lead-Intelligence-Platform',
     featured: false,
@@ -57,6 +61,8 @@ const PROJECTS = [
       'An AI-assisted pipeline that mirrors the analyst workflow: ingest, validate, calculate KPIs deterministically, flag anomalies with AI, generate decision-ready executive reports, and notify stakeholders — with every figure traceable to its source.',
     does:
       'A FastAPI service with a Python ingestion pipeline, deterministic KPI engine, AI anomaly detection with exponential-backoff retries, and an n8n workflow that routes results by severity into reporting, audit and notification streams. Covered by 65 automated tests.',
+    outcome:
+      'Reduces repetitive spreadsheet preparation and gives analysts traceable, decision-ready reports faster.',
     stack: ['FastAPI', 'Python', 'OpenAI', 'n8n', 'Airtable', 'Pytest'],
     repo: 'https://github.com/Terrytd0/Finance-Intelligence-Platform',
     featured: false,
@@ -79,6 +85,8 @@ const PROJECTS = [
       'An enterprise-grade system that orchestrates a team of specialized AI agents to classify, route and resolve support requests, with a supervisor approval queue for anything flagged as sensitive or unresolved.',
     does:
       'Built with LangGraph for stateful orchestration and CrewAI for role-based agents, behind a FastAPI backend with PostgreSQL as the system of record and Redis for rate limiting, idempotency, checkpoints and caching. Includes JWT auth, a policy engine and audit logging — 167 tests.',
+    outcome:
+      'Handles the repetitive ticket volume so support teams can focus on complex, sensitive cases.',
     stack: ['LangGraph', 'CrewAI', 'FastAPI', 'PostgreSQL', 'Redis', 'Docker'],
     repo: 'https://github.com/Terrytd0/Supportops-AI',
     featured: false,
@@ -199,6 +207,11 @@ function FeaturedProject({ p }) {
           <p>{p.does}</p>
         </div>
 
+        <div className="featured-outcome">
+          <h4 className="detail-h">Business outcome</h4>
+          <p>{p.outcome}</p>
+        </div>
+
         <div className="featured-stack">
           <h4 className="detail-h">Stack</h4>
           <div className="stack-tags">
@@ -231,6 +244,7 @@ function ProjectCard({ p }) {
         <Schematic nodes={p.schematic} />
       </div>
       <p className="project-does">{p.does}</p>
+      <p className="project-outcome">{p.outcome}</p>
       <div className="project-stack">
         <div className="stack-tags">
           {p.stack.map((s) => (

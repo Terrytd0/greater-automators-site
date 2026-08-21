@@ -13,9 +13,18 @@ export default function Contact() {
               worth automating?
             </h2>
             <p className="contact-sub">
-              Let&rsquo;s look at the process and see where AI can actually
-              help.
+              Tell us where your team is spending time on repetitive work.
+              We&rsquo;ll look at the process and see whether automation could
+              reduce the manual effort and operating cost.
             </p>
+            <a
+              href="https://calendly.com/terrynyirenda123/30min"
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-ghost contact-btn"
+            >
+              Book a 15-minute workflow conversation
+            </a>
             <div className="contact-options">
               <a
                 href="mailto:terry@greaterautomators.com"

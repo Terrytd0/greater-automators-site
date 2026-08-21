@@ -100,9 +100,10 @@ export default function Hero() {
             </span>
           </h1>
           <p className="hero-sub hero-enter" style={{ '--d': '340ms' }}>
-            Already using AI? There may still be repetitive work your tools
-            don&rsquo;t cover. We find those gaps and build custom automation
-            around them.
+            Already using AI? There may still be costly gaps around the tools
+            you already use. We find the repetitive work consuming your
+            team&rsquo;s time and build custom automation around it —
+            reducing manual effort, operating cost and wasted capacity.
           </p>
           <div className="hero-cta hero-enter" style={{ '--d': '460ms' }}>
             <a href="#work" className="btn btn-primary">

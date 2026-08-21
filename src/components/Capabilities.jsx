@@ -4,37 +4,37 @@ const ITEMS = [
   {
     n: '01',
     title: 'Lead Intelligence',
-    body: 'Research companies, prospects and markets and turn scattered information into structured intelligence.',
+    body: 'Research companies, prospects and markets and turn scattered information into structured intelligence — reducing the manual research and enrichment work your team would otherwise perform.',
     tags: ['Research', 'Enrichment', 'Outreach'],
   },
   {
     n: '02',
     title: 'Data Enrichment & Deduplication',
-    body: 'Research, enrich, normalize and reconcile records so information becomes more useful.',
+    body: 'Research, enrich, normalize and reconcile records so information becomes more useful while reducing repetitive data-cleaning work.',
     tags: ['Normalization', 'Reconciliation', 'Quality'],
   },
   {
     n: '03',
     title: 'Workflow Automation',
-    body: 'Connect repetitive steps into reliable automated workflows that run without babysitting.',
+    body: 'Connect repetitive steps into reliable automated workflows that reduce manual handoffs and free team capacity.',
     tags: ['Orchestration', 'Integrations', 'Reliability'],
   },
   {
     n: '04',
     title: 'Financial Analysis & Reporting',
-    body: 'Automate data processing, analysis and reporting workflows for numbers people can trust.',
+    body: 'Automate data processing, analysis and reporting workflows — reducing manual preparation time and improving consistency.',
     tags: ['Validation', 'KPI', 'Reporting'],
   },
   {
     n: '05',
     title: 'Customer Support Automation',
-    body: 'Build systems that organize information and automate repetitive support processes.',
+    body: 'Build systems that organize information and automate repetitive support processes, allowing teams to spend more time on complex customer needs.',
     tags: ['Agents', 'Routing', 'Knowledge'],
   },
   {
     n: '06',
     title: 'Custom AI Systems',
-    body: 'If the workflow doesn\u2019t fit a predefined category, we design a system around the actual problem.',
+    body: 'If the workflow doesn\u2019t fit a predefined category, we design a system around the actual problem and the operational benefit it should deliver.',
     tags: ['RAG', 'Agents', 'Design'],
   },
 ]

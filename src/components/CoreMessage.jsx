@@ -18,9 +18,17 @@ export default function CoreMessage() {
           <Reveal delay={120}>
             <p className="core-body">
               Every business has repetitive processes that consume human
-              time. We find those processes, determine where AI can genuinely
-              help, and build a system around the way your team already
-              works — not the other way around.
+              time — time that could go to judgment, relationships and
+              expertise. We find those processes, determine where automation
+              can genuinely reduce manual effort, and build a system around
+              the way your team already works — not the other way around.
+            </p>
+          </Reveal>
+          <Reveal delay={220}>
+            <p className="core-outcome">
+              Automation isn&rsquo;t the goal. The goal is to reduce the time
+              and cost of repetitive work — and give your team more capacity
+              for the work that actually requires people.
             </p>
           </Reveal>
         </div>

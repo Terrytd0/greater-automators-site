@@ -6,7 +6,7 @@ const STEPS = [
   {
     n: '01',
     title: 'Identify the opportunity',
-    body: 'Examine repetitive workflows and identify where AI or automation could remove unnecessary repetitive work.',
+    body: 'Examine repetitive workflows and identify where automation could reduce manual effort, save time and improve operational capacity.',
   },
   {
     n: '02',
@@ -47,6 +47,11 @@ export default function Process() {
           <Reveal>
             <span className="eyebrow">Process</span>
             <h2 className="section-title">How we work</h2>
+            <p className="section-sub">
+              We don&rsquo;t automate because AI is cool. We automate when the
+              repetitive work creates enough operational value to justify
+              doing it.
+            </p>
           </Reveal>
         </div>
 

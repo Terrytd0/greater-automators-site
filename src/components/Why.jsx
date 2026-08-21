@@ -8,8 +8,8 @@ const PILLARS = [
   },
   {
     k: 'PRACTICAL',
-    t: 'Focused on useful automation',
-    b: 'Not AI for its own sake. If a step does not need automation, it stays manual.',
+    t: 'Focused on measurable operational value',
+    b: 'Not AI for its own sake. We focus on repetitive work where automation can save time, reduce manual effort and create meaningful operational capacity.',
   },
   {
     k: 'ENGINEERED',
