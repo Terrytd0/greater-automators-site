@@ -2465,3 +2465,42 @@ header.style1 p {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* ============================================================
+   Floating scroll buttons (bottom-right)
+   ============================================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-nav {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.scroll-btn {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.scroll-btn:hover {
+  background: var(--blue-deep);
+  transform: translateY(-2px);
+}
+.scroll-btn .icon {
+  color: #fff;
+  font-size: 0.95rem;
+}
