@@ -8,14 +8,18 @@
 	<head>
 		<title>Greater Automators — systems that capture, respond, recover &amp; convert customers</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Businesses leak opportunities at every stage of the customer journey. Greater Automators builds the connected systems — starting with a high-converting website and instant lead response." />
 		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+		<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+		<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" /></noscript>
 		<link rel="stylesheet" href="/assets/css/main.css" />
 		<link rel="stylesheet" href="/assets/css/custom.css" />
+		<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" media="print" onload="this.media='all'" />
+		<noscript><link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" /></noscript>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -47,6 +51,8 @@
 
 				</section>
 
+			<main>
+
 			<!-- Intro -->
 				<section id="intro" class="wrapper style1">
 					<div class="title">Welcome</div>
@@ -72,7 +78,7 @@
 							<a href="#features" class="photo photo--wide">
 								<picture>
 									<source type="image/webp" srcset="/images/team-collaboration-480.webp 480w, /images/team-collaboration-800.webp 800w, /images/team-collaboration-1200.webp 1200w, /images/team-collaboration-1600.webp 1600w" sizes="(max-width: 736px) 100vw, 1120px">
-									<img src="/images/team-collaboration-800.jpg" srcset="/images/team-collaboration-480.jpg 480w, /images/team-collaboration-800.jpg 800w, /images/team-collaboration-1200.jpg 1200w, /images/team-collaboration-1600.jpg 1600w" sizes="(max-width: 736px) 100vw, 1120px" width="1600" height="900" alt="A team collaborating around a table in a modern office." loading="eager" fetchpriority="high" decoding="async">
+									<img src="/images/team-collaboration-800.jpg" srcset="/images/team-collaboration-480.jpg 480w, /images/team-collaboration-800.jpg 800w, /images/team-collaboration-1200.jpg 1200w, /images/team-collaboration-1600.jpg 1600w" sizes="(max-width: 736px) 100vw, 1120px" width="1600" height="900" alt="A team collaborating around a table in a modern office." loading="lazy" decoding="async">
 								</picture>
 							</a>
 
@@ -139,8 +145,8 @@
 							<h2>Not services. Infrastructure that plugs into the journey.</h2>
 							<p>One connected system covers every stage &mdash; from first visit to repeat customer.</p>
 						</header>
-						<div class="journey-flow" aria-label="The eight stages of the customer journey">
-							<span>Capture</span><span>Respond</span><span>Recover</span><span>Nurture</span><span>Book</span><span>Sell</span><span>Retain</span><span>Grow</span>
+						<div class="journey-flow" role="list" aria-label="The eight stages of the customer journey">
+							<span role="listitem">Capture</span><span role="listitem">Respond</span><span role="listitem">Recover</span><span role="listitem">Nurture</span><span role="listitem">Book</span><span role="listitem">Sell</span><span role="listitem">Retain</span><span role="listitem">Grow</span>
 						</div>
 						<ul class="actions special">
 							<li><a href="solutions.html" class="button style1 large">Explore Solutions</a></li>
@@ -161,8 +167,8 @@
 								<section class="highlight">
 									<a href="solutions.html" class="image featured">
 										<picture>
-											<source type="image/webp" srcset="/images/site.webp" />
-											<img src="/images/site.jpg" alt="High-converting website" loading="lazy" decoding="async" />
+											<source type="image/webp" srcset="/images/site-480.webp 480w, /images/site-800.webp 800w, /images/site.webp 982w" sizes="(max-width: 980px) 100vw, 600px" />
+											<img src="/images/site-800.jpg" srcset="/images/site-480.jpg 480w, /images/site-800.jpg 800w, /images/site.jpg 982w" sizes="(max-width: 980px) 100vw, 600px" width="982" height="647" alt="High-converting website" loading="lazy" decoding="async" />
 										</picture>
 									</a>
 									<h3><a href="solutions.html">High-Converting Website</a></h3>
@@ -176,8 +182,8 @@
 								<section class="highlight">
 									<a href="solutions.html" class="image featured">
 										<picture>
-											<source type="image/webp" srcset="/images/lead-response.webp" />
-											<img src="/images/lead-response.jpg" alt="Instant lead response" loading="lazy" decoding="async" />
+											<source type="image/webp" srcset="/images/lead-response-480.webp 480w, /images/lead-response-800.webp 800w, /images/lead-response.webp 984w" sizes="(max-width: 980px) 100vw, 600px" />
+											<img src="/images/lead-response-800.jpg" srcset="/images/lead-response-480.jpg 480w, /images/lead-response-800.jpg 800w, /images/lead-response.jpg 984w" sizes="(max-width: 980px) 100vw, 600px" width="984" height="647" alt="Instant lead response" loading="lazy" decoding="async" />
 										</picture>
 									</a>
 									<h3><a href="solutions.html">Instant Lead Response</a></h3>
@@ -255,6 +261,8 @@
 
 					</div>
 				</section>
+
+			</main>
 
 			<!-- Footer -->
 				<section id="footer" class="wrapper">
@@ -347,19 +355,19 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="/assets/js/jquery.min.js"></script>
-			<script src="/assets/js/jquery.dropotron.min.js"></script>
-			<script src="/assets/js/browser.min.js"></script>
-			<script src="/assets/js/breakpoints.min.js"></script>
-			<script src="/assets/js/util.js"></script>
-			<script src="/assets/js/main.js"></script>
-			<script src="/assets/js/contact.js"></script>
+			<script src="/assets/js/jquery.min.js" defer></script>
+			<script src="/assets/js/jquery.dropotron.min.js" defer></script>
+			<script src="/assets/js/browser.min.js" defer></script>
+			<script src="/assets/js/breakpoints.min.js" defer></script>
+			<script src="/assets/js/util.js" defer></script>
+			<script src="/assets/js/main.js" defer></script>
+			<script src="/assets/js/contact.js" defer></script>
 
 
 		<!-- Scroll buttons -->
-		<div class="scroll-nav" aria-label="Page scroll navigation">
-			<a href="#" class="scroll-btn" aria-label="Back to top"><i class="icon solid fa-arrow-up"></i></a>
-			<a href="#footer" class="scroll-btn" aria-label="Scroll to contact"><i class="icon solid fa-arrow-down"></i></a>
-		</div>
+		<nav class="scroll-nav" aria-label="Page scroll navigation">
+			<a href="#" class="scroll-btn"><i class="icon solid fa-arrow-up" aria-hidden="true"></i><span class="sr-only">Back to top</span></a>
+			<a href="#footer" class="scroll-btn"><i class="icon solid fa-arrow-down" aria-hidden="true"></i><span class="sr-only">Scroll to contact</span></a>
+		</nav>
 	</body>
 </html>

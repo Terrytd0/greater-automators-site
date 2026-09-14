@@ -8,14 +8,18 @@
 	<head>
 		<title>Contact — Greater Automators</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Tell Greater Automators where your customers are slipping away. One practical reply within one business day — no pitch, no obligation." />
 		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+		<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+		<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" /></noscript>
 		<link rel="stylesheet" href="/assets/css/main.css" />
 		<link rel="stylesheet" href="/assets/css/custom.css" />
+		<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" media="print" onload="this.media='all'" />
+		<noscript><link rel="stylesheet" href="/assets/css/fontawesome-all.min.css" /></noscript>
 	</head>
 	<body class="no-sidebar is-preload">
 		<div id="page-wrapper">
@@ -48,7 +52,7 @@
 				</section>
 
 			<!-- Main -->
-				<div id="main" class="wrapper style2">
+				<main id="main" class="wrapper style2">
 					<div class="title">Contact</div>
 					<div class="container">
 
@@ -137,7 +141,7 @@
 							</div>
 
 					</div>
-				</div>
+				</main>
 
 			<!-- Footer -->
 				<section id="footer" class="wrapper">
@@ -154,19 +158,19 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="/assets/js/jquery.min.js"></script>
-			<script src="/assets/js/jquery.dropotron.min.js"></script>
-			<script src="/assets/js/browser.min.js"></script>
-			<script src="/assets/js/breakpoints.min.js"></script>
-			<script src="/assets/js/util.js"></script>
-			<script src="/assets/js/main.js"></script>
-			<script src="/assets/js/contact.js"></script>
+			<script src="/assets/js/jquery.min.js" defer></script>
+			<script src="/assets/js/jquery.dropotron.min.js" defer></script>
+			<script src="/assets/js/browser.min.js" defer></script>
+			<script src="/assets/js/breakpoints.min.js" defer></script>
+			<script src="/assets/js/util.js" defer></script>
+			<script src="/assets/js/main.js" defer></script>
+			<script src="/assets/js/contact.js" defer></script>
 
 
 		<!-- Scroll buttons -->
-		<div class="scroll-nav" aria-label="Page scroll navigation">
-			<a href="#" class="scroll-btn" aria-label="Back to top"><i class="icon solid fa-arrow-up"></i></a>
-			<a href="#footer" class="scroll-btn" aria-label="Scroll to contact"><i class="icon solid fa-arrow-down"></i></a>
-		</div>
+		<nav class="scroll-nav" aria-label="Page scroll navigation">
+			<a href="#" class="scroll-btn"><i class="icon solid fa-arrow-up" aria-hidden="true"></i><span class="sr-only">Back to top</span></a>
+			<a href="#footer" class="scroll-btn"><i class="icon solid fa-arrow-down" aria-hidden="true"></i><span class="sr-only">Scroll to contact</span></a>
+		</nav>
 	</body>
 </html>
