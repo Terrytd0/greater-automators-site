@@ -3,22 +3,13 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Greater Automators — official website. Custom AI automation for repetitive business workflows.",
+  "description": "Greater Automators — official website.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "og": "node scripts/make-og.mjs",
-    "qa": "node scripts/qa.mjs",
-    "check": "node scripts/check.mjs"
-  },
-  "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.4",
-    "playwright-core": "^1.49.0",
     "vite": "^6.0.0"
   },
   "allowScripts": {

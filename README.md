@@ -1,89 +1,59 @@
 # Greater Automators — Official Website
 
-Custom AI automation for repetitive business workflows.
-
-A production-quality, single-page marketing site for **Greater Automators** (`greaterautomators.com`). It is a static site with no backend, built to deploy directly to Cloudflare Pages.
+The marketing site for **Greater Automators** (`greaterautomators.com`) — a multi-page static site that explains the eight systems that hold a customer journey, and how the studio works.
 
 ## Tech stack
 
-| Layer | Choice |
-| --- | --- |
-| Framework | React 19 |
-| Build tool | Vite 6 |
-| Styling | Hand-written vanilla CSS (design tokens + component styles, no framework) |
-| Fonts | Space Grotesk, Inter, JetBrains Mono (Google Fonts) |
-| QA | Playwright (screenshot capture + automated layout checks) |
+- **Static HTML** (no framework, no runtime dependencies) — `index.html`, `solutions.html`, `approach.html`, `contact.html`
+- **Build tool:** Vite (bundles the pages and copies `public/`)
+- **Styling:** `public/assets/css/main.css` (Escape Velocity template base) + `public/assets/css/custom.css` (brand theme: navy + blue, Inter)
+- **Fonts:** Inter (Google Fonts)
+- **Images:** optimized WebP + JPEG, responsive `srcset`/`sizes`, lazy-loaded
 
-No animation library, no CSS framework, no extra runtime dependencies beyond React — motion is done with CSS and a small set of IntersectionObserver hooks.
+## Pages
+
+- **Home** (`/`) — hero, the six opportunity leaks, the system, two systems, progressive expansion
+- **Solutions** (`/solutions`) — the eight systems across the customer journey
+- **Approach** (`/approach`) — principles, the four-step process, built for handoff
+- **Contact** (`/contact`) — contact form + contact details
 
 ## Folder structure
 
 ```
-greater-automators-site/
-├── index.html               # SEO head, OG/Twitter meta, JSON-LD, fonts
-├── package.json
+├── index.html / solutions.html / approach.html / contact.html
 ├── vite.config.js
 ├── public/
 │   ├── favicon.svg
-│   ├── og-cover.svg / .png  # generated Open Graph image
 │   ├── robots.txt
-│   └── sitemap.xml
-├── scripts/
-│   ├── make-og.mjs          # renders og-cover.svg -> og-cover.png
-│   ├── qa.mjs               # captures screenshots at 6 breakpoints + per-section shots
-│   └── check.mjs            # automated checks (overflow, anchors, ids, images, console)
-├── src/
-│   ├── main.jsx
-│   ├── App.jsx
-│   ├── hooks.js             # useInView, useScrollY, usePrefersReducedMotion
-│   ├── components/          # Nav, Hero, CoreMessage, Capabilities, Work, Philosophy,
-│   │                        # Process, Why, About, Contact, Footer, + primitives
-│   └── styles/
-│       ├── base.css         # design tokens, typography, buttons, reveal, a11y
-│       └── site.css         # layout + component styles, responsive rules
-└── dist/                    # production build output (gitignored)
+│   ├── sitemap.xml
+│   ├── _redirects          # pretty URLs (/solutions -> /solutions.html)
+│   ├── assets/
+│   │   ├── css/            # main.css (base) + custom.css (theme)
+│   │   └── js/             # contact.js (form -> Google Sheets) + vendor libs
+│   └── images/             # optimized WebP/JPEG photography + UI visuals
+└── dist/                   # build output (gitignored)
 ```
 
 ## Local development
 
 ```bash
 npm install
-npm run dev       # Vite dev server with HMR
-```
-
-Open the printed URL (default `http://localhost:5173`).
-
-## Scripts
-
-```bash
-npm run dev       # start the dev server
+npm run dev       # Vite dev server
 npm run build     # production build into dist/
 npm run preview   # serve the production build locally
-npm run qa        # capture QA screenshots into qa-shots/ (all breakpoints + sections)
-npm run check     # automated layout/health checks against the production build
-npm run og        # regenerate public/og-cover.png from public/og-cover.svg
 ```
+
+## Contact form
+
+The form posts to a Google Apps Script web app (`public/assets/js/contact.js`) which appends each submission to a Google Sheet and emails a starred notification. The Apps Script URL lives in `contact.js` (`SCRIPT_URL`).
 
 ## Deployment — Cloudflare Pages
 
-This is a plain static site (single page, no client-side routing), so no special redirects are required.
-
-1. Push this folder to a Git repository (GitHub/GitLab).
-2. In the Cloudflare dashboard: **Workers & Pages → Create → Pages → Connect to Git**.
-3. Select the repository and configure:
+1. Push this repo to GitHub.
+2. Cloudflare dashboard → **Workers & Pages → Create → Pages → Connect to Git**.
+3. Select the repo, then configure:
    - **Build command:** `npm run build`
    - **Build output directory:** `dist`
-   - **Node.js version:** 20 (or any current LTS)
-4. Deploy. Configure the custom domain `greaterautomators.com` and the canonical (non-www) URL in **Custom domains**.
+4. Deploy and attach the custom domain `greaterautomators.com`.
 
-The `_headers`/`_redirects` files are intentionally omitted — there are no server-side requirements.
-
-## Content placeholders still needed
-
-- **Additional projects** — the Work section currently features four real projects (LexRAG, AI Lead Intelligence, Finance Intelligence Platform, SupportOps AI). Add more by extending the `PROJECTS` array in `src/components/Work.jsx`.
-- **GitHub / LinkedIn** — the profile URLs are set (`https://github.com/Terrytd0`, `https://www.linkedin.com/in/terry-nyirenda-210455170`) in `src/components/About.jsx`, `src/components/Footer.jsx`, and `index.html` (JSON-LD `sameAs`).
-
-## Notes
-
-- `npm run qa` and `npm run check` require a local Chromium installation (Playwright's `chromium.launch()`). If no browser is available the scripts exit cleanly with `NO_BROWSER`.
-- The site respects `prefers-reduced-motion`; the animated system background and cursor glow are disabled for reduced-motion users and touch devices.
+The `public/_redirects` file enables pretty URLs (`/solutions` → `/solutions.html`).

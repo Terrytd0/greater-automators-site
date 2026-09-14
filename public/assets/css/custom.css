@@ -1,0 +1,2467 @@
+/* ============================================================
+   Greater Automators — modern theme
+   Blue accent, Inter typography, clean buttons/icons/cards on
+   top of the Escape Velocity layout.
+   ============================================================ */
+
+:root {
+  --blue: #2563eb;
+  --blue-deep: #1d4ed8;
+  --blue-dark: #1e40af;
+  --blue-wash: #eef4ff;
+  --navy: #0b1220;
+  --navy-2: #111c33;
+  --ink: #0f172a;
+  --body: #3b4a63;
+  --muted: #64748b;
+  --line: #e5e9f0;
+  --line-strong: #d3dae6;
+  --grey-light: #f6f8fb;
+  --shadow-sm: 0 1px 2px rgba(11, 18, 32, 0.05);
+  --shadow-md: 0 10px 32px rgba(11, 18, 32, 0.09), 0 2px 6px rgba(11, 18, 32, 0.05);
+}
+
+/* ---------- Base typography ---------- */
+html {
+  font-size: 16px;
+}
+
+body, input, textarea, select {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--body);
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+strong, b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--blue-deep);
+}
+
+p {
+  color: var(--body);
+}
+
+/* ---------- Section / article spacing ---------- */
+section, article {
+  margin: 0 0 3.25em 0;
+}
+
+header.style1 {
+  text-align: center;
+  padding: 1.5em 0 2em 0;
+}
+
+header.style1 h2 {
+  font-weight: 700;
+  font-size: clamp(1.9rem, 3.6vw, 2.7rem);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+header.style1 p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  letter-spacing: 0;
+  line-height: 1.6;
+  margin: 0.9em auto 0 auto;
+  max-width: 46em;
+}
+
+/* ---------- Buttons ---------- */
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button,
+.button {
+  text-transform: none;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-decoration: none;
+  border-radius: 0.5em;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-size: 1rem;
+  height: auto;
+  min-width: 0;
+  line-height: 1;
+  padding: 0.9em 1.7em 0.9em 1.7em;
+  box-shadow: none;
+}
+
+.button.large,
+input[type="button"].large,
+input[type="submit"].large,
+input[type="reset"].large,
+button.large {
+  font-size: 1.05rem;
+  min-width: 0;
+  padding: 1em 2em 1em 2em;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover,
+.button:hover {
+  background-color: var(--blue-deep);
+  color: #fff;
+}
+
+/* Primary (blue) */
+input[type="button"].style1,
+input[type="submit"].style1,
+button.style1,
+.button.style1,
+input[type="button"].style3,
+input[type="submit"].style3,
+button.style3,
+.button.style3 {
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.28);
+}
+
+input[type="button"].style1:hover,
+input[type="submit"].style1:hover,
+button.style1:hover,
+.button.style1:hover,
+input[type="button"].style3:hover,
+input[type="submit"].style3:hover,
+button.style3:hover,
+.button.style3:hover {
+  background: var(--blue-deep);
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.32);
+}
+
+/* Secondary (outline) */
+input[type="button"].style2,
+input[type="submit"].style2,
+input[type="reset"].style2,
+button.style2,
+.button.style2 {
+  background: transparent;
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1.5px var(--line-strong);
+}
+
+input[type="button"].style2:hover,
+input[type="submit"].style2:hover,
+input[type="reset"].style2:hover,
+button.style2:hover,
+.button.style2:hover {
+  background: transparent;
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1.5px var(--ink);
+}
+
+/* Outline button on dark backgrounds */
+.wrapper.style1 .button.style2,
+#footer .button.style2,
+#footer input[type="reset"].style2 {
+  color: #fff;
+  box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.45);
+}
+
+.wrapper.style1 .button.style2:hover,
+#footer .button.style2:hover,
+#footer input[type="reset"].style2:hover {
+  color: #fff;
+  box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.8);
+}
+
+/* ---------- Header / banner ---------- */
+#header {
+  height: 20em;
+}
+
+.homepage #header {
+  height: 24em;
+}
+
+#header {
+  background-image: none;
+}
+#header:before {
+  background: rgba(11, 18, 32, 0.32);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 1;
+}
+.header-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+  overflow: hidden;
+}
+.header-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+#logo,
+#nav {
+  z-index: 2;
+}
+
+/* ---------- Logo ---------- */
+#logo {
+  top: 1.5em;
+}
+
+#logo h1 {
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  font-size: 2.1em;
+}
+
+#logo h1 a {
+  color: #fff;
+}
+
+#logo p {
+  color: rgba(255, 255, 255, 0.78);
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0.7em 0 0 0;
+  font-size: 1em;
+}
+
+/* ---------- Nav ---------- */
+#nav > ul {
+  border-radius: 999px;
+  box-shadow: none;
+  padding: 0.25em 0.5em;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+#nav > ul > li {
+  padding: 0 0.25em;
+}
+
+#nav > ul > li > a,
+#nav > ul > li > span {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.95em;
+  font-weight: 500;
+  height: 2.6em;
+  line-height: 2.6em;
+  padding: 0 1.05em;
+  color: rgba(255, 255, 255, 0.82);
+  border-radius: 999px;
+}
+
+#nav > ul > li:hover > a {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#nav > ul > li.current > a,
+#nav > ul > li.active > a,
+#nav > ul > li.current > span,
+#nav > ul > li.active > span {
+  color: #fff;
+  background: var(--blue);
+}
+
+/* ---------- Mobile nav ---------- */
+#navPanel {
+  background: var(--navy);
+}
+
+#navPanel .link {
+  color: rgba(255, 255, 255, 0.78);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 1rem;
+  height: 48px;
+  line-height: 48px;
+  border-top: solid 1px rgba(255, 255, 255, 0.08);
+}
+
+#navPanel .depth-0 {
+  color: #fff;
+}
+
+#titleBar .toggle:before {
+  background-color: rgba(11, 18, 32, 0.65);
+  color: #fff;
+}
+
+/* ---------- Wrapper backgrounds ---------- */
+.wrapper {
+  padding: 6em 0 6em 0;
+}
+
+.wrapper.style1 {
+  background: radial-gradient(1000px 520px at 50% -12%, rgba(37, 99, 235, 0.3), transparent 62%), var(--navy);
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.wrapper.style2 {
+  background: #ffffff;
+}
+
+.wrapper.style3 {
+  background: var(--grey-light);
+}
+
+.wrapper.style3 .image {
+  border: 0;
+}
+
+/* ---------- Section title ribbon -> modern eyebrow ---------- */
+.wrapper .title {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: auto;
+  height: auto;
+  line-height: 1;
+  margin: 0 auto 2.75rem auto;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--blue);
+  background: transparent !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.wrapper .title:before,
+.wrapper .title:after {
+  content: '';
+  position: static;
+  display: inline-block;
+  width: 26px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.45;
+  transform: none;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  margin: 0;
+}
+
+.wrapper.style1 .title,
+#footer .title {
+  color: #8ab0ff;
+}
+
+/* ---------- Intro (hero) ---------- */
+#intro {
+  padding-bottom: 7em;
+}
+
+#intro p.style1 {
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  color: #8ab0ff;
+  font-weight: 500;
+}
+
+#intro p.style2 {
+  font-weight: 700;
+  color: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: clamp(2.5rem, 5.2vw, 3.8rem);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  padding: 0;
+  margin-bottom: 0.45em;
+}
+
+#intro p.style3 {
+  font-size: 1.15rem;
+  width: 46em;
+  max-width: 100%;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.78);
+  letter-spacing: 0;
+}
+
+/* ---------- Feature list + icons ---------- */
+.feature-list {
+  max-width: 60em;
+  top: 0;
+}
+
+.feature-list section {
+  border-top: solid 1px var(--line);
+  padding-top: 2.5em;
+  padding-left: 3.25em;
+}
+
+.feature-list h3 {
+  color: var(--ink) !important;
+  margin: 0 0 0.5em 0;
+  font-size: 1.12rem;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.feature-list h3:before {
+  display: block;
+  color: var(--blue) !important;
+  background: transparent !important;
+  border-radius: 0;
+  text-align: center;
+  width: 1.7em;
+  height: 1.7em;
+  line-height: 1.7em;
+  margin-right: 0;
+  position: absolute;
+  left: 0;
+  margin-top: -0.15em;
+  font-size: 1.25em;
+}
+
+.feature-list.small section {
+  padding-left: 2.6em;
+}
+
+.feature-list p {
+  color: var(--body);
+  font-size: 0.98rem;
+}
+
+/* ---------- Highlights / cards ---------- */
+#highlights .highlight {
+  text-align: left;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.6rem;
+  box-shadow: var(--shadow-sm);
+}
+
+#highlights .highlight h3 {
+  color: var(--ink);
+  margin: 0.75em 0 0.5em 0;
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+}
+
+#highlights .highlight h3 a {
+  color: var(--ink);
+}
+
+#highlights .highlight h3 a:hover {
+  color: var(--blue);
+}
+
+#highlights .highlight p {
+  color: var(--body);
+  font-size: 0.97rem;
+}
+
+/* ---------- Image containers ---------- */
+.image.featured {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.image.featured img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+#main .image.featured img,
+#content .image.featured img {
+  height: 340px;
+}
+
+#highlights .highlight .image.featured {
+  box-shadow: none;
+  border-radius: 10px;
+}
+
+#highlights .highlight .image.featured img {
+  height: 200px;
+}
+
+/* ---------- Forms ---------- */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form select,
+form textarea {
+  border: 1px solid var(--line-strong);
+  background: #fff;
+  box-shadow: none;
+  border-radius: 0.5em;
+  padding: 0.8em 1em;
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form select:focus,
+form textarea:focus {
+  background: #fff;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px var(--blue-wash);
+}
+
+form ::-webkit-input-placeholder { color: #94a3b8 !important; font-style: normal; }
+form :-moz-placeholder { color: #94a3b8 !important; font-style: normal; }
+form ::-moz-placeholder { color: #94a3b8 !important; font-style: normal; }
+form :-ms-input-placeholder { color: #94a3b8 !important; font-style: normal; }
+
+.form-status {
+  font-weight: 600;
+  margin-top: 0.75em;
+}
+
+/* ---------- Footer ---------- */
+#footer {
+  background: var(--navy);
+  color: rgba(255, 255, 255, 0.7);
+  padding-bottom: 5em;
+}
+
+#footer header.style1 {
+  padding-bottom: 3em;
+  margin-bottom: 3em;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.08);
+}
+
+#footer header.style1 h2 {
+  color: #fff;
+}
+
+#footer header.style1 p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+#footer .feature-list section {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+#footer .feature-list h3 {
+  color: #fff !important;
+}
+
+#footer .feature-list h3:before {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #8ab0ff !important;
+  border-radius: 0.5em;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  font-size: 1em;
+  margin-top: -0.1em;
+}
+
+#footer .feature-list a {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+#footer .feature-list a:hover {
+  color: #fff;
+}
+
+#footer form input[type="text"],
+#footer form input[type="email"],
+#footer form select,
+#footer form textarea {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+
+#footer form input[type="text"]:focus,
+#footer form input[type="email"]:focus,
+#footer form select:focus,
+#footer form textarea:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #8ab0ff;
+}
+
+#footer input[type="submit"].style1,
+#footer .button.style1 {
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.3);
+}
+
+/* ---------- Copyright ---------- */
+#copyright {
+  padding-top: 3.5em;
+  margin-top: 3.5em;
+  border-top: solid 1px rgba(255, 255, 255, 0.08);
+}
+
+#copyright ul {
+  box-shadow: none;
+  background: transparent;
+  border: 0;
+  color: rgba(255, 255, 255, 0.45);
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+#copyright ul li {
+  border-left: 0;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+#copyright a {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#copyright a:hover {
+  color: #fff;
+}
+
+/* ---------- Journey flow (8-stage pipeline) ---------- */
+.journey-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 62em;
+  margin: 1em auto 0.5em auto;
+}
+
+.journey-flow span {
+  background: #fff;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 0.5rem 1.05rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.journey-flow span:not(:last-child)::after {
+  content: '\2192';
+  color: var(--blue);
+  font-weight: 700;
+  margin-left: 0.5rem;
+}
+
+/* ---------- Phase cards (progressive expansion) ---------- */
+.phase-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.6rem;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+}
+
+.phase-num {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-wash);
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+}
+
+.phase-card h3 {
+  margin: 0.8rem 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.phase-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.8rem 0;
+}
+
+.phase-card ul li {
+  padding: 0;
+  margin: 0.15rem 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.phase-card .phase-note {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ---------- Responsive font-size resets ---------- */
+@media screen and (max-width: 1680px) {
+  body, input, textarea, select { font-size: 1rem; }
+}
+
+@media screen and (max-width: 1280px) {
+  body, input, textarea, select { font-size: 1rem; line-height: 1.7; letter-spacing: 0; }
+}
+
+@media screen and (max-width: 736px) {
+  body, input, textarea, select { font-size: 0.95rem; line-height: 1.65; }
+  h2, h3, h4, h5, h6 { font-size: 1.35em; letter-spacing: -0.01em; }
+}
+
+/* ============================================================
+   Solutions + Approach — visual marketing compositions
+   ============================================================ */
+
+/* ---------- Shared primitives ---------- */
+
+.ga-lede {
+  max-width: 46em;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.ga-hero-image {
+  max-width: 62em;
+  margin: 0.75em auto 0 auto;
+}
+.ga-hero-image img {
+  height: 400px;
+  object-fit: cover;
+}
+
+.ga-num {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-wash);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+}
+
+.ga-panel {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+/* ---------- Split layout (visual + copy) ---------- */
+
+.ga-split {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+.ga-split + .ga-split {
+  margin-top: 5rem;
+}
+.ga-split.reverse {
+  flex-direction: row-reverse;
+}
+.ga-split .ga-visual {
+  flex: 1 1 52%;
+  min-width: 0;
+}
+.ga-split .ga-copy {
+  flex: 1 1 48%;
+  min-width: 0;
+}
+
+.ga-sys-title {
+  font-size: 1.75rem;
+  margin: 0.85rem 0 0.6rem;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+.ga-sys-desc {
+  color: var(--body);
+  font-size: 1.03rem;
+  margin: 0 0 1.2rem;
+}
+
+.ga-caps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.55rem 1.5rem;
+}
+.ga-caps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  color: var(--body);
+  font-size: 0.96rem;
+  font-weight: 500;
+}
+.ga-caps li::before {
+  content: '\2713';
+  color: var(--blue);
+  font-weight: 700;
+  flex: 0 0 auto;
+  line-height: 1.45;
+}
+
+/* ---------- Generic card + captions ---------- */
+
+.ga-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.7rem 1.6rem;
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+}
+.ga-card h3 {
+  margin: 0.85rem 0 0.5rem;
+  font-size: 1.3rem;
+  letter-spacing: -0.01em;
+}
+.ga-card p {
+  color: var(--body);
+  font-size: 0.96rem;
+  margin: 0 0 1.2rem;
+}
+
+.ga-caption {
+  margin-top: 1.1rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ga-caption .icon {
+  color: var(--blue);
+  flex: 0 0 auto;
+}
+
+.ga-pad {
+  padding: 1.6rem;
+}
+
+.ga-mt {
+  margin-top: 1.1rem;
+}
+
+.ga-flow-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 600;
+  margin: 0 0 0.9rem;
+}
+.ga-flow-label .icon {
+  color: var(--blue);
+  flex: 0 0 auto;
+}
+.ga-flow-label + .mini-flow {
+  margin-bottom: 1.6rem;
+}
+
+/* ---------- Browser mockup ---------- */
+
+.browser .bar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 0.9rem;
+  background: var(--grey-light);
+  border-bottom: 1px solid var(--line);
+}
+.browser .bar .d {
+  width: 0.62rem;
+  height: 0.62rem;
+  border-radius: 50%;
+  background: var(--line-strong);
+}
+.browser .bar .url {
+  flex: 1;
+  margin-left: 0.5rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.26rem 0.8rem;
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.browser .body {
+  padding: 1.5rem;
+}
+
+.mock-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 1.3rem;
+}
+.mock-nav .logo {
+  width: 6rem;
+  height: 0.7rem;
+  background: var(--ink);
+  border-radius: 3px;
+}
+.mock-nav .links {
+  display: flex;
+  gap: 0.9rem;
+}
+.mock-nav .links i {
+  display: block;
+  width: 2.6rem;
+  height: 0.5rem;
+  background: var(--line-strong);
+  border-radius: 3px;
+}
+.mock-h {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin: 0 0 0.5rem;
+}
+.mock-sub {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0 0 1.1rem;
+  max-width: 30em;
+}
+.mock-cta {
+  display: inline-block;
+  background: var(--blue);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 0.5em;
+  padding: 0.55em 1.2em;
+}
+.mock-form {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1.25rem;
+  background: #fff;
+}
+.mock-input {
+  display: block;
+  width: 100%;
+  height: 2.2rem;
+  background: var(--grey-light);
+  border: 1px solid var(--line);
+  border-radius: 0.5em;
+  margin-bottom: 0.6rem;
+}
+.mock-btn {
+  display: inline-block;
+  background: var(--blue);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 0.5em;
+  padding: 0.5em 1.1em;
+}
+
+/* Phone preview */
+.phone {
+  width: 8.75rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow-md);
+  padding: 0.6rem;
+}
+.phone .scr {
+  background: var(--grey-light);
+  border-radius: 12px;
+  padding: 0.7rem;
+}
+.phone .scr .ln {
+  height: 0.45rem;
+  background: var(--line-strong);
+  border-radius: 3px;
+  margin-bottom: 0.45rem;
+}
+.phone .scr .ln.short {
+  width: 62%;
+}
+.phone .scr .cta {
+  background: var(--blue);
+  height: 1.35rem;
+  border-radius: 0.5em;
+  margin-top: 0.75rem;
+}
+
+.browser-wrap {
+  position: relative;
+}
+.browser-wrap .phone {
+  position: absolute;
+  right: -1.6rem;
+  bottom: -1.6rem;
+}
+
+/* ---------- Vertical flow ---------- */
+
+.flow {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.flow .step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.9rem 1.1rem;
+  box-shadow: var(--shadow-sm);
+}
+.flow .step .ic {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 0.65em;
+  background: var(--blue-wash);
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  flex: 0 0 auto;
+}
+.flow .step .tx {
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 0.97rem;
+  line-height: 1.35;
+}
+.flow .step .tx small {
+  display: block;
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.84rem;
+  margin-top: 0.15rem;
+}
+.flow .arrow {
+  align-self: center;
+  color: var(--blue);
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0.4rem 0;
+}
+
+/* ---------- Chat mockup ---------- */
+
+.chat .chat-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.75rem 1.1rem;
+  background: var(--navy);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.chat .chat-head .tag {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #8ab0ff;
+  white-space: nowrap;
+}
+.chat .chat-body {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.chat .msg {
+  max-width: 82%;
+  border-radius: 14px;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+.chat .msg.in {
+  align-self: flex-start;
+  background: var(--grey-light);
+  border: 1px solid var(--line);
+  color: var(--body);
+}
+.chat .msg.out {
+  align-self: flex-end;
+  background: var(--blue);
+  color: #fff;
+}
+.chat .chat-note {
+  padding: 0.9rem 1.2rem;
+  border-top: 1px solid var(--line);
+  background: var(--blue-wash);
+  color: var(--blue-dark);
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+/* ---------- Review visual ---------- */
+
+.review-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.1rem 1.2rem;
+  box-shadow: var(--shadow-sm);
+}
+.review-card .stars {
+  color: #2563eb;
+  letter-spacing: 0.1em;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+.review-card .rbody {
+  color: var(--body);
+  font-size: 0.9rem;
+  margin: 0 0 0.6rem;
+}
+.review-card .rmeta {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+/* ---------- Mini horizontal flow (recovery) ---------- */
+
+.mini-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+}
+.mini-flow .chip {
+  background: #fff;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 0.5rem 0.95rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.mini-flow .chip.blue {
+  background: var(--blue-wash);
+  border-color: transparent;
+  color: var(--blue-dark);
+}
+.mini-flow .sep {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+/* ---------- Journey map (solutions) — signature timeline ---------- */
+
+.journey-map {
+  position: relative;
+  max-width: 42em;
+  margin: 0 auto;
+  padding: 0.5rem 0 1.5rem 0;
+}
+.journey-map::before {
+  content: '';
+  position: absolute;
+  top: 1.1rem;
+  bottom: 1.75rem;
+  left: 1.5rem;
+  width: 2px;
+  background: var(--line-strong);
+}
+.journey-map::after {
+  content: '';
+  position: absolute;
+  bottom: 0.2rem;
+  left: 1.5rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-bottom: 2px solid var(--blue);
+  border-right: 2px solid var(--blue);
+  transform: translateX(-50%) rotate(45deg);
+}
+.jm-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.85rem 0;
+}
+.jm-node {
+  width: 3rem;
+  height: 3rem;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.jm-body {
+  flex: 1;
+  min-width: 0;
+}
+.jm-stage {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+.jm-sys {
+  display: inline-block;
+  margin-top: 0.45rem;
+  background: var(--blue-wash);
+  color: var(--blue-dark);
+  border-radius: 999px;
+  padding: 0.32rem 0.9rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+/* ---------- Progression (solutions) ---------- */
+
+.progression {
+  max-width: 46em;
+  margin: 0 auto;
+}
+.prog-step {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.4rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+.prog-step .prog-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  row-gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+.prog-step .prog-head .p-num {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.65em;
+  background: var(--navy);
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  font-size: 1rem;
+}
+.prog-step .prog-head h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--ink);
+}
+.prog-step .prog-head .p-role {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+.prog-step .prog-sys {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.prog-step .prog-sys span {
+  background: var(--blue-wash);
+  color: var(--blue-dark);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.prog-arrow {
+  display: flex;
+  justify-content: center;
+  color: var(--blue);
+  font-size: 1.3rem;
+  line-height: 1;
+  padding: 0.45rem 0;
+}
+.prog-note {
+  text-align: center;
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 38em;
+  margin: 1.75rem auto 0 auto;
+}
+
+/* ---------- Principles grid (approach) ---------- */
+
+.principle-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.5rem 1.4rem;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+}
+.principle-card .p-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--blue);
+}
+.principle-card h3 {
+  margin: 0.7rem 0 0.45rem;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+}
+.principle-card p {
+  margin: 0;
+  color: var(--body);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+/* ---------- Stage timeline (approach) ---------- */
+
+.stages {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+}
+.stage-card {
+  flex: 1 1 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.6rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+.stage-connector {
+  align-self: center;
+  flex: 0 0 auto;
+  color: var(--blue);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.stage-card .s-num {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.95rem;
+}
+.stage-card .s-ic {
+  color: var(--blue);
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+}
+.stage-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+}
+.stage-card p {
+  margin: 0;
+  color: var(--body);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+/* ---------- Leak map (approach) ---------- */
+
+.leakmap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.leakmap .lstep {
+  flex: 1 1 8.5rem;
+  min-width: 7.5rem;
+  max-width: 12rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.9rem 0.8rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+.leakmap .lstep .lic {
+  color: var(--blue);
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+.leakmap .lstep .lname {
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 0.92rem;
+}
+.leakmap .leak {
+  flex: 1 1 5rem;
+  min-width: 5.5rem;
+  max-width: 8rem;
+  background: #fdf3f3;
+  border: 1px dashed #f3c1c1;
+  border-radius: 12px;
+  padding: 0.9rem 0.7rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+}
+.leakmap .leak .lic {
+  color: #d9534f;
+  font-size: 0.95rem;
+}
+.leakmap .leak .lname {
+  font-weight: 600;
+  color: #a33a36;
+  font-size: 0.78rem;
+  line-height: 1.3;
+}
+
+/* ---------- CTA band ---------- */
+
+.cta-band {
+  text-align: center;
+}
+.cta-band .eyebrow {
+  color: #8ab0ff;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  margin: 0 0 1.1rem;
+}
+.cta-band h2 {
+  color: #fff;
+  font-size: clamp(1.9rem, 3.6vw, 2.7rem);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 0.6rem;
+}
+.cta-band p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.1rem;
+  max-width: 44em;
+  margin: 0 auto 2rem auto;
+}
+.cta-band .actions {
+  justify-content: center;
+}
+
+/* ---------- Handoff panel (approach) ---------- */
+
+.handoff-panel {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--blue);
+  border-radius: 16px;
+  padding: 2.4rem 2.5rem;
+  box-shadow: var(--shadow-md);
+}
+.handoff-panel h2 {
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  letter-spacing: -0.02em;
+  margin: 0.4rem 0 0.6rem;
+}
+.handoff-panel .lead {
+  color: var(--body);
+  font-size: 1.05rem;
+  max-width: 44em;
+  margin: 0 0 2rem;
+}
+.handoff-grid {
+  display: flex;
+  align-items: stretch;
+  gap: 1.4rem;
+}
+.handoff-grid .cell {
+  flex: 1 1 0;
+  border-top: 2px solid var(--line);
+  padding-top: 1.2rem;
+}
+.handoff-arrow {
+  align-self: center;
+  flex: 0 0 auto;
+  color: var(--blue);
+  font-size: 1.35rem;
+  line-height: 1;
+  padding-top: 1.2rem;
+}
+.handoff-grid .cell .hic {
+  color: var(--blue);
+  font-size: 1.4rem;
+  margin-bottom: 0.55rem;
+}
+.handoff-grid .cell h4 {
+  margin: 0 0 0.4rem;
+  font-size: 1.15rem;
+}
+.handoff-grid .cell p {
+  margin: 0;
+  color: var(--body);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ---------- Optional layers (approach) ---------- */
+
+.optional-layers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+}
+.layer-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.6rem 1.6rem;
+  box-shadow: var(--shadow-sm);
+}
+.layer-card .layer-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+.layer-card h3 {
+  margin: 0.7rem 0 0.9rem;
+  font-size: 1.3rem;
+}
+.layer-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.layer-card ul li {
+  position: relative;
+  padding: 0.55rem 0 0.55rem 1.6rem;
+  border-top: 1px solid var(--line);
+  color: var(--body);
+  font-size: 0.96rem;
+  font-weight: 500;
+}
+.layer-card ul li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0.1rem;
+  top: 0.55rem;
+  color: var(--blue);
+  font-weight: 700;
+}
+.layer-card .optional-flag {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+  border: 1px dashed var(--line-strong);
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+}
+
+/* ---------- Responsive ---------- */
+
+@media screen and (max-width: 980px) {
+  .ga-split,
+  .ga-split.reverse {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: stretch;
+  }
+  .ga-split + .ga-split {
+    margin-top: 3.5rem;
+  }
+  .browser-wrap .phone {
+    position: static;
+    margin: 1rem auto 0 auto;
+  }
+  .stages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .stage-connector {
+    display: none;
+  }
+  .optional-layers {
+    grid-template-columns: 1fr;
+  }
+  .handoff-grid {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .handoff-arrow {
+    transform: rotate(90deg);
+    padding-top: 0;
+    align-self: center;
+  }
+  .handoff-panel {
+    padding: 1.8rem 1.5rem;
+  }
+  .ga-hero-image img {
+    height: 320px;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .ga-caps {
+    grid-template-columns: 1fr;
+  }
+  .stages {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .ga-hero-image img {
+    height: 230px;
+  }
+  .mini-flow {
+    gap: 0.4rem;
+  }
+  .leakmap .lstep,
+  .leakmap .leak {
+    flex: 1 1 45%;
+    max-width: none;
+    min-width: 0;
+  }
+}
+
+/* ============================================================
+   Refinement pass — scale + readability (Solutions / Approach)
+   ============================================================ */
+
+/* Section headings + spacing */
+.ga-page section:not(#footer):not(#header) header.style1 {
+  padding: 2em 0 2.5em 0;
+}
+.ga-page section:not(#footer):not(#header) header.style1 h2 {
+  font-size: clamp(2.2rem, 4.4vw, 3.2rem);
+}
+.ga-page section:not(#footer):not(#header) header.style1 p {
+  font-size: 1.15rem;
+  max-width: 44em;
+}
+
+/* Lede / body text readability */
+.ga-lede {
+  font-size: 1.18rem;
+  line-height: 1.7;
+  color: var(--body);
+  max-width: 42em;
+}
+
+/* System titles + descriptions */
+.ga-sys-title {
+  font-size: 2rem;
+  margin: 0.9rem 0 0.7rem;
+}
+.ga-sys-desc {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0 0 1.4rem;
+}
+.ga-caps {
+  gap: 0.65rem 1.6rem;
+}
+.ga-caps li {
+  font-size: 1.02rem;
+}
+.ga-num {
+  font-size: 0.78rem;
+}
+
+/* Split layout — more visual weight + breathing room */
+.ga-split {
+  gap: 3.25rem;
+}
+.ga-split + .ga-split {
+  margin-top: 6rem;
+}
+.ga-split .ga-visual {
+  flex: 1 1 55%;
+}
+.ga-split .ga-copy {
+  flex: 1 1 45%;
+}
+
+/* Cards + captions */
+.ga-card {
+  padding: 2rem 1.9rem;
+}
+.ga-card h3 {
+  font-size: 1.42rem;
+  margin: 0.9rem 0 0.55rem;
+}
+.ga-card p {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  margin: 0 0 1.3rem;
+}
+.ga-caption {
+  font-size: 0.9rem;
+  margin-top: 1.25rem;
+}
+.ga-pad {
+  padding: 1.9rem;
+}
+
+/* Flow steps */
+.flow .step {
+  padding: 1.05rem 1.25rem;
+  gap: 1.1rem;
+  border-radius: 14px;
+}
+.flow .step .ic {
+  width: 2.7rem;
+  height: 2.7rem;
+  font-size: 1.15rem;
+}
+.flow .step .tx {
+  font-size: 1.06rem;
+}
+.flow .step .tx small {
+  font-size: 0.9rem;
+}
+.flow .arrow {
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+}
+
+/* Browser mockup */
+.browser .body {
+  padding: 1.75rem;
+}
+.mock-h {
+  font-size: 1.55rem;
+}
+.mock-sub {
+  font-size: 0.98rem;
+}
+.mock-cta {
+  font-size: 0.9rem;
+}
+.phone {
+  width: 9.5rem;
+}
+
+/* Chat */
+.chat .chat-head {
+  padding: 0.85rem 1.2rem;
+  font-size: 0.95rem;
+}
+.chat .chat-body {
+  padding: 1.4rem;
+}
+.chat .msg {
+  font-size: 0.95rem;
+  padding: 0.7rem 1rem;
+}
+.chat .chat-note {
+  font-size: 0.88rem;
+}
+
+/* Review */
+.review-card {
+  padding: 1.3rem 1.4rem;
+}
+.review-card .rbody {
+  font-size: 1rem;
+}
+.review-card .rmeta {
+  font-size: 0.84rem;
+}
+
+/* Mini flow chips */
+.mini-flow .chip {
+  font-size: 0.95rem;
+  padding: 0.55rem 1.05rem;
+}
+
+/* Progression */
+.prog-step {
+  padding: 1.6rem 1.7rem;
+}
+.prog-step .prog-head h3 {
+  font-size: 1.4rem;
+}
+.prog-step .prog-sys span {
+  font-size: 0.95rem;
+  padding: 0.45rem 1rem;
+}
+.prog-note {
+  font-size: 1.08rem;
+}
+.p-flag {
+  margin-left: auto;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-wash);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  white-space: nowrap;
+}
+.p-flag.navy {
+  color: #fff;
+  background: var(--navy);
+}
+
+/* Principles */
+.principle-card {
+  padding: 1.9rem 1.8rem;
+}
+.principle-card .p-num {
+  font-size: 0.8rem;
+}
+.principle-card h3 {
+  font-size: 1.28rem;
+  margin: 0.8rem 0 0.55rem;
+}
+.principle-card p {
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+/* Leak map */
+.leakmap .lstep .lname {
+  font-size: 0.98rem;
+}
+.leakmap .leak .lname {
+  font-size: 0.84rem;
+}
+
+/* Optional layers */
+.layer-card {
+  padding: 1.9rem 1.9rem;
+}
+.layer-card h3 {
+  font-size: 1.42rem;
+}
+.layer-card ul li {
+  font-size: 1.02rem;
+}
+
+/* CTA band */
+.cta-band h2 {
+  font-size: clamp(2.1rem, 4vw, 3rem);
+}
+.cta-band p {
+  font-size: 1.18rem;
+  max-width: 42em;
+}
+
+/* Handoff panel */
+.handoff-panel {
+  padding: 2.6rem 2.7rem;
+}
+.handoff-panel h2 {
+  font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+}
+.handoff-panel .lead {
+  font-size: 1.1rem;
+}
+
+/* ============================================================
+   Photography — optimized responsive images
+   ============================================================ */
+
+.photo {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 14px;
+  background: var(--grey-light);
+  box-shadow: var(--shadow-md);
+}
+.photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Aspect ratios */
+.photo--wide {
+  aspect-ratio: 16 / 9;
+}
+.photo--standard {
+  aspect-ratio: 3 / 2;
+}
+.photo--portrait {
+  aspect-ratio: 3 / 4;
+}
+.photo--centered {
+  aspect-ratio: 3 / 2;
+  max-width: 52rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3.5rem;
+}
+
+/* Spacing when a photo sits above a visual in a split column */
+.ga-visual > .photo + * {
+  margin-top: 1.4rem;
+}
+.photo + .progression {
+  margin-top: 3rem;
+}
+.handoff-panel .photo {
+  box-shadow: none;
+  margin-bottom: 2rem;
+}
+
+/* Stacked cards (e.g. Solutions recovery) */
+.ga-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+/* Duo layout: portrait photo beside a UI mockup */
+.ga-duo {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.ga-duo .photo--portrait {
+  flex: 0 0 32%;
+}
+.ga-duo .ga-duo-main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+@media screen and (max-width: 736px) {
+  .ga-duo {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ga-duo .photo--portrait {
+    flex: 0 0 auto;
+    width: min(230px, 60vw);
+  }
+  .ga-duo .ga-duo-main {
+    width: 100%;
+  }
+}
+
+/* ============================================================
+   Escape Velocity — substantial composition restoration
+   keeps Greater Automators content, blue + navy palette
+   ============================================================ */
+
+/* ---- Base typography: larger + more editorial ---- */
+body, input, textarea, select {
+  font-size: 18px;
+  line-height: 1.75;
+}
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0.02em;
+}
+
+/* ---- Section boundaries: generous padding + contrast ---- */
+.wrapper {
+  padding: 6em 0 9em 0;
+}
+.wrapper.style3 {
+  background: #eef1f5;
+}
+
+/* ---- Section labels: bold tabs straddling the boundary ---- */
+.wrapper .title {
+  position: absolute;
+  top: -1.7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  min-width: 11rem;
+  max-width: calc(100% - 48px);
+  height: 3.4rem;
+  margin: 0;
+  padding: 0 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.26em;
+  font-size: 0.86rem;
+  white-space: nowrap;
+  overflow: hidden;
+  background: #fff !important;
+  color: var(--ink);
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 5px 16px -6px rgba(11, 18, 32, 0.28);
+  z-index: 2;
+}
+.wrapper .title:before,
+.wrapper .title:after {
+  display: none;
+}
+.wrapper.style3 .title {
+  background: #eef1f5 !important;
+}
+.wrapper.style1 .title,
+#footer .title {
+  background: var(--navy-2) !important;
+  color: #fff;
+}
+
+/* ---- Header: dramatic banner ---- */
+#header {
+  height: 24em;
+}
+.homepage #header {
+  height: 32em;
+}
+
+/* ---- Hero: substantial, framed statement ---- */
+#intro {
+  padding-bottom: 10em;
+}
+#intro p.style1 {
+  font-size: 1.35rem;
+  letter-spacing: 0.12em;
+  color: #8ab0ff;
+  font-weight: 500;
+  margin-bottom: 1.8em;
+}
+#intro p.style2 {
+  font-weight: 800;
+  color: #fff;
+  border-radius: 0.35em;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.22);
+  font-size: clamp(2.8rem, 5.6vw, 4.1rem);
+  letter-spacing: 0.03em;
+  line-height: 1.16;
+  padding: 1em 0.7em;
+  margin-bottom: 1em;
+}
+#intro p.style3 {
+  font-size: 1.38rem;
+  width: 56rem;
+  max-width: 100%;
+  margin: 1.8em auto 0 auto;
+  color: rgba(255, 255, 255, 0.78);
+  letter-spacing: 0.01em;
+  line-height: 1.65;
+}
+
+/* ---- Typography hierarchy: larger, expanded headings ---- */
+header.style1 {
+  padding: 3em 0 4em 0;
+}
+header.style1 h2 {
+  font-size: clamp(2.7rem, 5vw, 3.9rem);
+  letter-spacing: 0.03em;
+  line-height: 1.18;
+}
+.ga-page section:not(#footer):not(#header) header.style1 h2 {
+  font-size: clamp(2.7rem, 5vw, 3.9rem);
+}
+header.style1 p {
+  font-size: 1.38rem;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  max-width: 60rem;
+}
+.ga-lede {
+  max-width: 60rem;
+  font-size: 1.38rem;
+  letter-spacing: 0.01em;
+  line-height: 1.7;
+}
+.ga-sys-title {
+  letter-spacing: 0.01em;
+}
+
+/* ---- Feature list: circular icon badges ---- */
+.feature-list {
+  max-width: none;
+}
+.feature-list section {
+  padding-top: 3em;
+  padding-left: 4.5em;
+}
+.feature-list h3 {
+  color: var(--blue) !important;
+  margin: -0.35em 0 0.75em 0;
+  font-size: 1.3rem;
+  letter-spacing: 0.03em;
+}
+.feature-list h3:before {
+  color: #fff !important;
+  background: var(--navy) !important;
+  border-radius: 50%;
+  text-align: center;
+  width: 2.6em;
+  height: 2.6em;
+  line-height: 2.6em;
+  margin-right: 0.75em;
+  position: absolute;
+  left: 0;
+  margin-top: -0.55em;
+  font-size: 0.85em;
+}
+.feature-list p {
+  font-size: 1.05rem;
+}
+#footer .feature-list h3:before {
+  border-radius: 50%;
+}
+
+/* ---- Photography: square, shadowless (editorial) ---- */
+.photo {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* ---- De-card: content sits directly on the section background ---- */
+.principle-card,
+.stage-card,
+.phase-card,
+.ga-card,
+.prog-step,
+.layer-card {
+  background: transparent;
+  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+}
+.principle-card {
+  border-top: 3px solid var(--blue);
+}
+.stage-card {
+  border-top: 1px solid var(--line);
+}
+.ga-panel {
+  border-radius: 6px;
+  box-shadow: none;
+}
+.flow .step,
+.review-card {
+  box-shadow: none;
+}
+.handoff-panel {
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+/* ---- Widen structural content ---- */
+.progression {
+  max-width: 62em;
+}
+.journey-map {
+  max-width: 58em;
+}
+
+/* ---- Homepage: substantial journey chips ---- */
+.journey-flow span {
+  font-size: 1.02rem;
+  padding: 0.7rem 1.5rem;
+  font-weight: 600;
+}
+
+/* ---- Homepage: full-width progressive photograph ---- */
+.photo--centered {
+  max-width: none;
+}
+
+/* ---- Homepage: larger two-system highlights ---- */
+#highlights .highlight {
+  padding: 2.6rem 2.4rem;
+  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+}
+#highlights .highlight h3 {
+  font-size: 1.5rem;
+}
+#highlights .highlight p {
+  font-size: 1.08rem;
+}
+
+/* ---- Responsive ---- */
+@media screen and (max-width: 736px) {
+  body, input, textarea, select {
+    font-size: 17px;
+  }
+  .wrapper .title {
+    top: -1.4rem;
+    height: 2.7rem;
+    line-height: 2.7rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    padding: 0 1.4rem;
+  }
+  #intro {
+    padding-bottom: 6em;
+  }
+}
+
+/* ============================================================
+   Header — restored to Escape Velocity banner treatment
+   ============================================================ */
+
+/* Taller banner, matching the template (24em / 35em) */
+#header {
+  height: 26em;
+}
+.homepage #header {
+  height: 36em;
+}
+
+/* Uppercase, wide-letter-spaced logo */
+#logo {
+  top: 2em;
+}
+#logo h1 {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 2.4em;
+}
+#logo p {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 1.4em 0 0 0;
+}
+@media screen and (max-width: 736px) {
+  #logo h1 {
+    font-size: 1.5em;
+    letter-spacing: 0.18em;
+  }
+  #logo p {
+    letter-spacing: 0.12em;
+    font-size: 0.8em;
+  }
+}
+
+/* Uppercase nav inside a thin white-outlined box (not a glassy pill) */
+#nav {
+  top: 3em;
+}
+#nav > ul {
+  border-radius: 0.35em;
+  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.25);
+  background: transparent;
+  border: 0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  padding: 0 1.5em;
+}
+#nav > ul > li {
+  padding: 0 1.4em;
+}
+#nav > ul > li > a,
+#nav > ul > li > span {
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.9em;
+  font-weight: 700;
+  height: 4em;
+  line-height: 4em;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.75);
+  border-radius: 0;
+}
+#nav > ul > li:hover > a {
+  color: #fff;
+  background: transparent;
+}
+#nav > ul > li.current > a,
+#nav > ul > li.active > a,
+#nav > ul > li.current > span,
+#nav > ul > li.active > span {
+  color: #fff;
+  background: transparent;
+}
+
+/* ============================================================
+   Escape Velocity port — wide layout + substantial composition
+   ============================================================ */
+
+/* Wide container (matches the template's ~1300px effective width) */
+.container {
+  width: 1360px;
+  max-width: 100%;
+}
+@media screen and (max-width: 1460px) {
+  .container {
+    width: calc(100% - 100px);
+  }
+}
+@media screen and (max-width: 736px) {
+  .container {
+    width: calc(100% - 40px);
+  }
+}
+
+/* Widen inner text measures (no skinny centered column) */
+header.style1 p {
+  max-width: 64rem;
+}
+.ga-lede {
+  max-width: 64rem;
+}
+
+/* Homepage: substantial journey chips */
+.journey-flow {
+  max-width: none;
+}
+.journey-flow span {
+  font-size: 1.1rem;
+  padding: 0.85rem 1.6rem;
+  letter-spacing: 0.04em;
+}
+
+/* Homepage: larger highlight imagery (natural 3:2, no strip crop) */
+#highlights .highlight .image.featured img {
+  height: auto;
+  aspect-ratio: 3 / 2;
+}
+
+/* De-card: content columns, not boxes */
+.principle-card,
+.stage-card,
+.phase-card,
+.ga-card,
+.prog-step,
+.layer-card {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* ============================================================
+   Solutions — journey split + progress flashcards
+   ============================================================ */
+
+/* Journey image (full-width, natural 3:2, no crop) + horizontal timeline */
+.journey-hero {
+  max-width: none;
+  margin-bottom: 3.5rem;
+}
+
+/* Horizontal timeline: 4 columns, 2 rows */
+.journey-map {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.25rem 1.5rem;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+.journey-map::before,
+.journey-map::after {
+  display: none;
+}
+.jm-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 0;
+}
+.jm-body {
+  flex: none;
+  min-width: 0;
+}
+.jm-node {
+  margin-bottom: 0.2rem;
+}
+
+/* Progress steps as flashcards */
+.prog-step {
+  background: #fff;
+  border: 1px solid var(--line-strong);
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(11, 18, 32, 0.07);
+  padding: 1.9rem 2.1rem;
+}
+
+@media screen and (max-width: 980px) {
+  .journey-map {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
