@@ -26,7 +26,6 @@ The marketing site for **Greater Automators** (`greaterautomators.com`) — a mu
 │   ├── favicon.svg
 │   ├── robots.txt
 │   ├── sitemap.xml
-│   ├── _redirects          # pretty URLs (/solutions -> /solutions.html)
 │   ├── assets/
 │   │   ├── css/            # main.css (base) + custom.css (theme)
 │   │   └── js/             # contact.js (form -> Google Sheets) + vendor libs
@@ -56,4 +55,8 @@ The form posts to a Google Apps Script web app (`public/assets/js/contact.js`) w
    - **Build output directory:** `dist`
 4. Deploy and attach the custom domain `greaterautomators.com`.
 
-The `public/_redirects` file enables pretty URLs (`/solutions` → `/solutions.html`).
+The site uses **extensionless URLs** (`/solutions`, `/approach`, `/contact`). Cloudflare
+Pages serves the `.html` files at those paths and redirects `/solutions.html` →
+`/solutions` with a 307, so all canonicals, the sitemap and all internal links point at
+the extensionless form. Do not reintroduce `.html` into canonicals, the sitemap or
+internal hrefs — the declared canonical must be the URL that returns 200.

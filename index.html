@@ -33,36 +33,70 @@
 		<script type="application/ld+json">
 		{
 		  "@context": "https://schema.org",
-		  "@type": "ProfessionalService",
-		  "@id": "https://greaterautomators.com/#organization",
-		  "name": "Greater Automators",
-		  "alternateName": "greaterautomators",
-		  "url": "https://greaterautomators.com/",
-		  "logo": "https://greaterautomators.com/favicon.svg",
-		  "image": "https://greaterautomators.com/images/banner-1600.jpg",
-		  "description": "Digital engineering studio building the connected systems that capture, respond, recover and convert customers - starting with a high-converting website and instant lead response.",
-		  "email": "greaterautomators@gmail.com",
-		  "telephone": "+1-469-935-1357",
-		  "knowsAbout": [
-		    "High-converting websites",
-		    "Instant lead response",
-		    "Missed-call recovery",
-		    "Lead reactivation",
-		    "AI receptionist",
-		    "Reputation management",
-		    "AI sales training",
-		    "AI marketing systems"
-		  ],
-		  "sameAs": [
-		    "https://www.linkedin.com/in/terry-nyirenda-210455170"
-		  ],
-		  "contactPoint": {
-		    "@type": "ContactPoint",
-		    "contactType": "sales",
-		    "email": "greaterautomators@gmail.com",
-		    "telephone": "+1-469-935-1357",
-		    "availableLanguage": "English"
-		  }
+		  "@graph": [
+		    {
+		      "@type": "ProfessionalService",
+		      "@id": "https://greaterautomators.com/#organization",
+		      "name": "Greater Automators",
+		      "alternateName": [
+		        "greaterautomators",
+		        "greater automators",
+		        "Greater Automaters",
+		        "greater automaters",
+		        "greaterautomators.com"
+		      ],
+		      "url": "https://greaterautomators.com/",
+		      "logo": {
+		        "@type": "ImageObject",
+		        "@id": "https://greaterautomators.com/#logo",
+		        "url": "https://greaterautomators.com/favicon.svg",
+		        "contentUrl": "https://greaterautomators.com/favicon.svg"
+		      },
+		      "image": { "@id": "https://greaterautomators.com/#logo" },
+		      "description": "Digital engineering studio building the connected systems that capture, respond, recover and convert customers - starting with a high-converting website and instant lead response.",
+		      "email": "greaterautomators@gmail.com",
+		      "telephone": "+1-469-935-1357",
+		      "knowsAbout": [
+		        "High-converting websites",
+		        "Instant lead response",
+		        "Missed-call recovery",
+		        "Lead reactivation",
+		        "AI receptionist",
+		        "Reputation management",
+		        "AI sales training",
+		        "AI marketing systems"
+		      ],
+		      "sameAs": [
+		        "https://www.linkedin.com/in/terry-nyirenda-210455170"
+		      ],
+		      "contactPoint": {
+		        "@type": "ContactPoint",
+		        "@id": "https://greaterautomators.com/#contactpoint",
+		        "contactType": "sales",
+		        "email": "greaterautomators@gmail.com",
+		        "telephone": "+1-469-935-1357",
+		        "availableLanguage": "English"
+		      }
+		    },
+		    {
+		      "@type": "WebSite",
+		      "@id": "https://greaterautomators.com/#website",
+		      "url": "https://greaterautomators.com/",
+		      "name": "Greater Automators",
+		      "alternateName": "Greater Automaters",
+		      "inLanguage": "en-US",
+		      "publisher": { "@id": "https://greaterautomators.com/#organization" }
+		    },
+		    {
+		      "@type": "WebPage",
+		      "@id": "https://greaterautomators.com/#webpage",
+		      "url": "https://greaterautomators.com/",
+		      "name": "Greater Automators — systems that capture, respond, recover & convert customers",
+		      "isPartOf": { "@id": "https://greaterautomators.com/#website" },
+		      "about": { "@id": "https://greaterautomators.com/#organization" },
+		      "inLanguage": "en-US"
+		    }
+		  ]
 		}
 		</script>
 	</head>
@@ -88,9 +122,9 @@
 						<nav id="nav">
 							<ul>
 								<li class="current"><a href="/">Home</a></li>
-								<li><a href="solutions.html">Solutions</a></li>
-								<li><a href="approach.html">Approach</a></li>
-								<li><a href="contact.html">Contact</a></li>
+								<li><a href="/solutions">Solutions</a></li>
+								<li><a href="/approach">Approach</a></li>
+								<li><a href="/contact">Contact</a></li>
 							</ul>
 						</nav>
 
@@ -109,7 +143,7 @@
 						high-converting website and instant lead response.</p>
 						<ul class="actions">
 							<li><a href="https://calendly.com/terrynyirenda123/30min" class="button style3 large">Strategy Call</a></li>
-							<li><a href="solutions.html" class="button style2 large">Explore Solutions</a></li>
+							<li><a href="/solutions" class="button style2 large">Explore Solutions</a></li>
 						</ul>
 					</div>
 				</section>
@@ -174,7 +208,7 @@
 									</div>
 								</div>
 								<ul class="actions special">
-									<li><a href="solutions.html" class="button style1 large">Explore Solutions</a></li>
+									<li><a href="/solutions" class="button style1 large">Explore Solutions</a></li>
 									<li><a href="https://calendly.com/terrynyirenda123/30min" class="button style2 large">Strategy Call</a></li>
 								</ul>
 							</section>
@@ -194,7 +228,7 @@
 							<span role="listitem">Capture</span><span role="listitem">Respond</span><span role="listitem">Recover</span><span role="listitem">Nurture</span><span role="listitem">Book</span><span role="listitem">Sell</span><span role="listitem">Retain</span><span role="listitem">Grow</span>
 						</div>
 						<ul class="actions special">
-							<li><a href="solutions.html" class="button style1 large">Explore Solutions</a></li>
+							<li><a href="/solutions" class="button style1 large">Explore Solutions</a></li>
 						</ul>
 					</div>
 				</section>
@@ -210,31 +244,31 @@
 						<div class="row gtr-50">
 							<div class="col-6 col-12-medium">
 								<section class="highlight">
-									<a href="solutions.html" class="image featured">
+									<a href="/solutions" class="image featured">
 										<picture>
 											<source type="image/webp" srcset="/images/site-480.webp 480w, /images/site-800.webp 800w, /images/site.webp 982w" sizes="(max-width: 980px) 100vw, 600px" />
 											<img src="/images/site-800.jpg" srcset="/images/site-480.jpg 480w, /images/site-800.jpg 800w, /images/site.jpg 982w" sizes="(max-width: 980px) 100vw, 600px" width="982" height="647" alt="High-converting website" loading="lazy" decoding="async" />
 										</picture>
 									</a>
-									<h3><a href="solutions.html">High-Converting Website</a></h3>
+									<h3><a href="/solutions">High-Converting Website</a></h3>
 									<p>Your digital front door. Fast, mobile-first pages with a clear offer and one strong call to action &mdash; conversion means an easy next step, not decoration.</p>
 									<ul class="actions">
-										<li><a href="solutions.html" class="button style1">Explore the Website</a></li>
+										<li><a href="/solutions" class="button style1">Explore the Website</a></li>
 									</ul>
 								</section>
 							</div>
 							<div class="col-6 col-12-medium">
 								<section class="highlight">
-									<a href="solutions.html" class="image featured">
+									<a href="/solutions" class="image featured">
 										<picture>
 											<source type="image/webp" srcset="/images/lead-response-480.webp 480w, /images/lead-response-800.webp 800w, /images/lead-response.webp 984w" sizes="(max-width: 980px) 100vw, 600px" />
 											<img src="/images/lead-response-800.jpg" srcset="/images/lead-response-480.jpg 480w, /images/lead-response-800.jpg 800w, /images/lead-response.jpg 984w" sizes="(max-width: 980px) 100vw, 600px" width="984" height="647" alt="Instant lead response" loading="lazy" decoding="async" />
 										</picture>
 									</a>
-									<h3><a href="solutions.html">Instant Lead Response</a></h3>
+									<h3><a href="/solutions">Instant Lead Response</a></h3>
 									<p>The moment an enquiry lands, your team is notified and the customer gets an automatic acknowledgement. No lead waits in an inbox.</p>
 									<ul class="actions">
-										<li><a href="solutions.html" class="button style1">Explore Lead Response</a></li>
+										<li><a href="/solutions" class="button style1">Explore Lead Response</a></li>
 									</ul>
 								</section>
 							</div>
@@ -396,6 +430,7 @@
 						<div id="copyright">
 							<ul>
 								<li>&copy; Greater Automators. All rights reserved.</li>
+								<li>Greater Automators is also written &ldquo;Greater Automaters&rdquo;.</li>
 							</ul>
 						</div>
 					</div>
